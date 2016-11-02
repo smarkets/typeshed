@@ -1,0 +1,9 @@
+from typing import Any, Callable
+
+from eventlet.greenthread import GreenThread
+
+class GreenPool:
+    size = ...  # type: int
+    def __init__(self, size: int = ...) -> None: ...
+    def spawn(self, function: Callable, *args: Any, **kwargs: Any) -> GreenThread: ...
+    def spawn_n(self, function: Callable, *args: Any, **kwargs: Any) -> None: ...
